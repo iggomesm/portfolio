@@ -29,7 +29,7 @@ $(document).ready(function () {
 
 
 $(window).scroll(function () {
-  const p = document.querySelector("#skills")
+  const p = document.querySelector("#about")
   if (estaVisivel(p)) {
     $('.navbar').removeClass("navbar-expand-lg fixed-top navbar-scroll");
     $('.navbar').addClass("navbar navbar-expand-lg navbar-light bg-white fixed-top");
