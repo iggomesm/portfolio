@@ -10,13 +10,13 @@ function estaVisivel(el) {
     const inicio = posicoes.top;
     const fim = posicoes.bottom;
     let estaVisivel = false
-    
+
     if((inicio >= 0) && (fim <= window.innerHeight)) {
             estaVisivel = true;
     }
-    
+
     return estaVisivel;
-    
+
 }
 
 $(document).ready(function () {
@@ -36,5 +36,16 @@ $(window).scroll(function () {
   } else if ($(this).scrollTop() >= 10 && $(this).scrollTop() <= 500) {
     $('.navbar').removeClass("navbar-light bg-white fixed-top");
     $('.navbar').addClass("navbar-expand-lg fixed-top navbar-scroll");
-  } 
+  }
 });
+
+$("#about").click((e) => {
+  changeItemByElement($(this).attr('id'));
+});
+
+let changeItemByElement = function(element){
+//$('html, body').animate({ scrollTop: ($(".navbar").offset().top - 50)}, 50);
+
+       $('html, body').animate({ scrollTop: ($(element).offset().top - 50)}, 50);
+
+   }
